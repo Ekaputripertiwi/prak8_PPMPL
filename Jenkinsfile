@@ -15,9 +15,9 @@ pipeline {
                 script {
                     def branch = env.BRANCH_NAME ?: env.GIT_BRANCH
                     if (branch == 'main') {
-                        git branch: 'main', url: 'https://github.com/Ekaputripertiwi/prak8_PPMPL'
+                        git branch: 'main', url: 'https://github.com/Ekaputripertiwi/prak8_PPMPL.git'
                     } else if (branch == 'develop') {
-                        git branch: 'develop', url: 'https://github.com/Ekaputripertiwi/prak8_PPMPL'
+                        git branch: 'develop', url: 'https://github.com/Ekaputripertiwi/prak8_PPMPL.git'
                     }
                 }
             }
@@ -42,9 +42,9 @@ pipeline {
             echo 'Building the application...'
             }
         }
-        stage('Deploy to Production') {
+        stage('Deploy to Staging') {
             steps {
-                echo 'Simulating deployment to production...'
+                echo 'Simulating deployment to staging...'
             }
         }
     }
