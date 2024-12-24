@@ -13,7 +13,7 @@
     "jest": "^29.7.0"
   },
   "dependencies": {
-    "expres": "^0.0.5",
+    "express": "^4.21.2",
     "supertest": "^7.0.0"
   }
 }
