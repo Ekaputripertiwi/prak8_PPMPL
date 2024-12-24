@@ -32,12 +32,20 @@ pipeline {
  }
  }
  }
- post {
- success {
- echo 'Pipeline finished successfully!'
- }
- failure {
- echo 'Pipeline failed!'
- }
- }
+post { 
+        success { 
+            emailext (
+                subject: 'Build Succeeded', 
+                body: 'The build succeeded!', 
+                to: '2200016133@webmail.uad.ac.id'
+            )
+        } 
+        failure { 
+            emailext (
+                subject: 'Build Failed',
+                body: 'The build failed.', 
+                to: '2200016133@webmail.uad.ac.id'
+            )
+        } 
+    }
 }
