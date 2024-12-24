@@ -8,5 +8,3 @@ describe('GET /', () => {
         expect(response.text).toBe('Hello, World!');
     });
 });
-
-//integrations.js
